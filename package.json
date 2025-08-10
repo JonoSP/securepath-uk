@@ -1,0 +1,14 @@
+﻿{
+  "name": "securepath-uk",
+  "version": "0.1.0",
+  "description": "AI-Enhanced ISO 27001 Consultancy Platform",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest"
+  },
+  "author": "SecurePath UK",
+  "license": "UNLICENSED",
+  "private": true
+}
