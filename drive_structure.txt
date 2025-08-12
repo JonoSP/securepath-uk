@@ -1,0 +1,55 @@
+﻿    01_Lead_Template
+    02_Prospect_Template
+    03_Active_Client_Template
+    04_ISO_27001_Full_Template
+
+  _Templates
+  CL001_Artificial_Intelligence_Ltd_prospect
+  CL003_Cybernetic_Systems_active
+  CL006_Financial_Dynamics_Inc_active
+
+01_Clients
+02_Operations
+  01_Policies_and_Procedures
+  02_Security_Documentation
+  03_ISO_27001_Framework
+  04_Compliance_Evidence
+  05_Risk_Management
+  06_Incident_Management
+  07_Business_Continuity
+  08_Audit_Trail
+03_Finance
+  01_FY2025
+  02_Client_Billing
+  03_Supplier_Invoices
+  04_Banking
+  05_Insurance
+  06_Tax_Returns
+04_Marketing
+  01_Content
+  02_Campaigns
+  03_Brand_Assets
+  04_Case_Studies
+  05_Lead_Generation
+  06_Website
+05_Technology
+  01_Architecture_Docs
+  02_API_Documentation
+  03_Security_Configs
+  04_Automation_Scripts
+  05_Infrastructure
+  06_Development
+06_Legal_Compliance
+  01_Contracts
+  02_NDAs
+  03_Terms_and_Conditions
+  04_Privacy_Policies
+  05_GDPR_Documentation
+  06_ISO_27001_Certification
+07_Internal
+  01_Team_Management
+  02_Training_Materials
+  03_Meeting_Notes
+  04_Knowledge_Base
+  05_Project_Management
+

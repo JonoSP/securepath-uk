@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>SecurePath UK Drive Setup</title>
+    <script>
+        function createFolders() {
+            const folders = [
+                '01_Clients',
+                '02_Operations',
+                '03_Finance',
+                '04_Marketing',
+                '05_Internal',
+                '06_Technical'
+            ];
+            
+            // Open Google Drive in new tabs for each folder
+            folders.forEach((folder, index) => {
+                setTimeout(() => {
+                    window.open(`https://drive.google.com/drive/my-drive?action=new_folder&name=${folder}`, '_blank');
+                }, index * 1000);
+            });
+            
+            document.getElementById('status').innerHTML = 'Folders opened in browser. Click "Create" in each tab.';
+        }
+    </script>
+</head>
+<body>
+    <h1>SecurePath UK Google Drive Setup</h1>
+    <button onclick="createFolders()" style="padding:20px;font-size:18px;">Create All Folders</button>
+    <p id="status"></p>
+    <hr>
+    <h2>Folder Structure:</h2>
+    <pre>
+📁 01_Clients
+   └── Active_Clients, Prospects, Completed_Projects, Templates
+📁 02_Operations (RESTRICTED)
+   └── Policies_Procedures, Security_Documentation, ISO_27001_Framework, Compliance_Evidence
+📁 03_Finance (RESTRICTED)
+   └── Invoices, Contracts, Financial_Reports, Budgets
+📁 04_Marketing
+   └── Content, Campaigns, Brand_Assets, Case_Studies
+📁 05_Internal
+   └── Team_Resources, Training_Materials, Meeting_Notes, Project_Management
+📁 06_Technical
+   └── Architecture_Docs, API_Documentation, Security_Configs, Automation_Scripts
+    </pre>
+</body>
+</html>
