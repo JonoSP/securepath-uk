@@ -25,3 +25,33 @@ Thumbs.db
 # Logs
 *.log
 logs/
+
+# Security - NEVER commit these
+*.key
+*.pem
+*.pfx
+*.p12
+*.cer
+*.crt
+.env
+.env.*
+!.env.example
+secrets/
+private/
+credentials/
+*.secret
+config/production.json
+
+# Backup files
+*.backup
+*.bak
+*.tmp
+*.swp
+
+# IDE and OS
+.vscode/settings.json
+.idea/
+*.suo
+*.user
+Thumbs.db
+.DS_Store

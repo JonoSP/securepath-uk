@@ -1,0 +1,21 @@
+﻿# Code Owners for SecurePath UK
+# These users will be automatically requested for review
+
+# Global owners (all files)
+* @JonoSP
+
+# Security-critical files require additional review
+/config/ @JonoSP
+/src/config/ @JonoSP
+/.env* @JonoSP
+/security/ @JonoSP
+*.key @JonoSP
+*.pem @JonoSP
+
+# Documentation
+/docs/ @JonoSP
+*.md @JonoSP
+
+# CI/CD and automation
+/.github/ @JonoSP
+/scripts/ @JonoSP
