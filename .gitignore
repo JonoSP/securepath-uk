@@ -55,3 +55,7 @@ config/production.json
 *.user
 Thumbs.db
 .DS_Store
+
+# Logs
+logs/
+*.log
