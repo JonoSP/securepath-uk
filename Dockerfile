@@ -1,17 +1,18 @@
-# Stage 1: pull the official Bitwarden bws CLI
-FROM bitwarden/bws:latest AS bws
-
-# Stage 2: n8n app image
-FROM n8nio/n8n:latest
+# n8n with Bitwarden Secrets Manager (bws) CLI
+FROM n8nio/n8n:latest-debian
 
 USER root
-# Copy the bws binary
-COPY --from=bws /bin/bws /usr/local/bin/bws
-# Copy cert bundle used by bws
-COPY --from=bws /etc/ssl/certs /etc/ssl/certs
-# Copy bws runtime libs into a safe path and expose via LD_LIBRARY_PATH
-COPY --from=bws /lib /opt/bws-lib
-ENV LD_LIBRARY_PATH="/opt/bws-lib:${LD_LIBRARY_PATH}"
+RUN apt-get update \
+ && apt-get install -y curl unzip ca-certificates \
+ && rm -rf /var/lib/apt/lists/*
 
-# Drop back to non-root (n8n expects this)
+# Install the GNU/glibc build of bws
+ARG BWS_VERSION=1.0.0
+RUN curl -fsSL -o /tmp/bws.zip \
+  "https://github.com/bitwarden/sdk-sm/releases/download/bws-v${BWS_VERSION}/bws-x86_64-unknown-linux-gnu-${BWS_VERSION}.zip" \
+ && unzip /tmp/bws.zip -d /usr/local/bin \
+ && chmod +x /usr/local/bin/bws \
+ && rm /tmp/bws.zip
+
+# Drop back to non-root
 USER node
